@@ -19,7 +19,7 @@ import random
 
 def dnd_dice_generator():
   number = random.randint(0, 20)
-  if number < 20:
+  if number > 1 and number < 20:
     print('Your attack hits!')
   elif number == 20:
     print('You score a critical hit!')

@@ -6,7 +6,6 @@
 import random
 
 my_choices = ['r', 'p', 's']
-my_answers = ['you win!', 'you lose!', 'its a draw!']
 
 question = input('Welcome! What is your choice? ')
 
@@ -16,8 +15,10 @@ def rock_paper_scissors(r, p, s):
     print('you win!')
   elif stored_value == p:
     print('you lose!')
-  elif stored_value == s:
+  else:
     print('its a draw!')
+
+    return stored_value
 
 
 rock_paper_scissors('r', 'p', 's')
