@@ -16,3 +16,31 @@ def sales_calc(*args):
 
 
 sales_calc(30, 30, 20, 20, 60, 10)
+
+
+
+class Multiples:
+  def __init__(self, adder, subractor, divider, multiplier):
+    self.adder = adder
+    self.subractor = subractor
+    self.divider = divider
+    self.multiplier = multiplier
+
+  def the_adder(self):
+    return self.adder + 2
+
+  def the_subtractor(self):
+    return self.subractor - 2
+
+  def the_divider(self):
+    return self.divider / 2
+
+  def the_multiplier(self):
+    return self.multiplier * 2
+
+
+first = Multiples(1, 2, 3, 4)
+print(first.the_adder())
+print(first.the_subtractor())
+print(first.the_divider())
+print(first.the_multiplier())
