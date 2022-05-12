@@ -40,3 +40,20 @@ dnd_dice_generator()
 # char_interaction('mileena', dnd_dice_generator())
 
 # Mileena, Your attack hits!
+
+def flex_dice():
+  greeting = input('What is your name? ')
+  player = input(f'Hello, {greeting}! What side die would you like? Please choose 1-100: ')
+  print(f'You chose a {player} sided die, roll for initiative!')
+  player_roll = random.randrange(1, int(player))
+  while True:
+    action = input('enter r to roll: ')
+    if action == 'r':
+      print(f'You rolled {player_roll}!')
+      return False
+    else:
+      print('Please roll again.')
+  
+
+
+flex_dice()
