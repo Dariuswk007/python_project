@@ -57,3 +57,32 @@ def flex_dice():
 
 
 flex_dice()
+
+
+#create a class that determine whether an attack is super effective, not very effective, has no effect, or normal damage.
+
+
+
+class Pokemon:
+
+  def __init__(self, poke_one, poke_two):
+    self.poke_one = poke_one
+    self.poke_two = poke_two
+
+
+  def introduction(self):
+    intro = input(f'You sent out {self.poke_one}! Your opponent sends out {self.poke_two}!')
+    action = input("What do you do?  \n 'Water Gun', 'Steel Claw', 'Earthquake', 'Faint Attack'\n\n ")
+    if action == 'Water Gun':
+      print("It's super effective!")
+    elif action == 'Steel Claw':
+      print("It's not very effective...")
+    elif action == 'Earthquake':
+      print("It has no effect!")
+    else:
+      print('A direct hit!')
+      return action
+
+
+entry_one = Pokemon('Blastoise', 'Moltres')
+print(entry_one.introduction())
